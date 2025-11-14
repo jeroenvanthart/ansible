@@ -51,7 +51,7 @@
       when: mode == "update"
     
     - name: show version
-      debug:
+      ansible.builtin.debug:
         msg: "{{ ansible_facts['ansible_local']['webserver']['general']['version'] | int + 1 }}"
       when: mode == "update"
     
@@ -63,7 +63,7 @@
         value: "{{ lookup('ansible.utils.index_of', ansible_play_hosts, 'eq', inventory_hostname) }}"
     
     - name: Start the httpd service if needed
-          ansible.builtin.service:
-            name: httpd
-            state: started
-            enabled: true
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true
