@@ -1,6 +1,6 @@
 ---
 - name: Install Webserver
-  hosts: all
+  hosts: rhel
   become: true
   vars:
     facts_dir: "/etc/ansible/facts.d"
