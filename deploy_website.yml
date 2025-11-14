@@ -1,0 +1,11 @@
+---
+# refresh website from git to webservers
+- name: Update website
+  hosts: role_webserver
+  become: yes
+
+  tasks:
+  - name: Copy the code from repository
+    git:
+      repo: "{{ git_base }}/website_demo.git"
+      dest: /var/www/html/
