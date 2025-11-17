@@ -3,6 +3,7 @@
   hosts: rhel
   become: true
   vars:
+    ansible_python_interpreter: /usr/bin/python3
     facts_dir: "/etc/ansible/facts.d"
     
   tasks:
