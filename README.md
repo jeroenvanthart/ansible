@@ -30,7 +30,7 @@ This workshop has been designed such that **you** will need to do most of the wo
 ## Controller Building Blocks
 You need to create some building blocks in AAP for this workshop. This document explains what you need to make. When you are done, go back to the README.md in the workshop repo.
 
-[!NOTE] wherever you can and/or need to specify an Organization, choose `TechXchangeNL`, unless stated otherwise.
+> [!NOTE] wherever you can and/or need to specify an Organization, choose `TechXchangeNL`, unless stated otherwise.
 
 
 #### Project
