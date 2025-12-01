@@ -35,6 +35,7 @@ Wherever you can and/or need to specify an Organization, choose `TechXchangeNL`,
 
 ### Project
 You need to create a project in AAP. The project is your repository with playbooks.
+- Log into github with your own account. If you do not have one, create one.
 - Fork the the Ansible repository that you can find [here](https://github.com/TechXchangeNL/ansible.git)
 - Create a project in `Automation Execution > Projects` and use this fork. Enable `Update REvisions on Job Lauch`
 
