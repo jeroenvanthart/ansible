@@ -1,13 +1,19 @@
----
-- name: Create a new Terraform run with auto-apply
-  hashicorp.terraform.run:
-    workspace: "jh-terraform"
-    organization: "TechXchangeNL"
-    run_message: "Deploy new application version"
-    auto_apply: true
-    variables:
-      - key: "environment"
-        value: "production"
-      - key: "app_version"
-        value: "v1.2.3"
-    state: "present"
+- name: HCP
+  hosts: all
+  tasks:
+  - name: Apply a terraform plan
+    hashicorp.terraform.run:
+      organization: "TechXchangeNL"
+      workspace: "{{ workspace }}"
+      run_message: "Apply infrastructure changes"
+      auto_apply: true
+      tf_timeout: 6000
+      poll: true
+      poll_interval: 5
+      poll_timeout: 1200
+      state: "present"
+    register: result
+
+  - name: show result
+    ansible.builtin.debug:
+      msg: "{{ result }}"
